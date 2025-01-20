@@ -1,6 +1,6 @@
 /* STYLES GENERAUX */
 * {
-    font-family: Avenir, sans-serif;
+    font-family: "Parkinsans", sans-serif;
     margin: 0;
     padding: 0; 
     text-align: justify;
@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #ededed;
+    background: #f9f9f9;
 }
 
 p {
@@ -21,18 +21,26 @@ a {
     color: #000;
 }
 
+h1 {
+    color: #469196;
+}
+
+h2 {
+    color: #55a39c;
+}
+
 /* HEADER ET FOOTER */
 
 header, footer {
     width: 100%;
     padding: 20px 0;
-    background: url("https://campuslandes.com/") #4f4f4f;
+    background: #c8e0e4;
     box-shadow: 0 0 15px #333;
 }
 
 header {
     border-bottom: 2px solid #fff;
-    height: 120px;
+    height: 65px;
 }
 
 header h1 {
@@ -40,6 +48,21 @@ header h1 {
     font-size: 1.5em;
     width: 90%;
     margin: 0 auto;
+    text-align: center;
+}
+
+header a {
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 10px;
+    margin: 10px auto 30px auto;
+    color: #fff;
+    background-color: #558da5;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 5px;
 }
 
 footer {
@@ -47,72 +70,149 @@ footer {
 }
 
 footer p {
-    color: #fff;
+    color: #558da5;
     text-align: center;
     width: 90%;
     margin: 0 auto;
 }
 
 footer a {
-    color: #fff;
+    color: #558da5;
 }
 
 /* SECTIONS */
 
-section {
+.section-presentation {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 5vh;
+    padding-top: 25px;
+}
+
+.section-interet, .competences, .forma, .experiences {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    width: 100%;
     padding-bottom: 20px;
-    margin: 20px auto;
+    margin: 20px;
     box-shadow: 0 0 10px #bbb;
-    background-color: #fff;
+    background-color: #c8e0e4;
+    border-radius: 10px;
 }
 
 section h2 {
     margin: 20px 0;
-    width: 90%;
+    width: 100%;
+    text-align: center;
 }
 
 section > div {
-    width: 90%;
+    width: 100%;
 }
 
 /* SECTION INFORMATIONS */
 
 .photo-profil {
     text-align: center;
+    grid-column: 2;
 }
 
 .photo-profil img {
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 300px;
     border: 3px solid #fff;
     box-shadow: 0 0 10px #777;
     border-radius: 50%;
-    margin-top : -80px;
 }
 
 .presentation {
-    border-bottom: 2px dashed #ccc;
+    border-left: 2px dashed #ccc;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.presentation a {
-    display: block;
-    text-align: center;
-    padding: 10px;
-    margin: 10px auto 30px auto;
-    color: #fff;
-    background-color: #EA0;
-    box-shadow: 0 0 10px #ccc;
-    border-radius: 5px;
+.presentation h1 {
+    padding-top: 20px;
+    font-size: 3em;
+    font-family: "Pacifico", cursive;
 }
 
-.contact-flex {
-    display: flex;
-    flex-flow: row wrap;
+.presentation h2 {
+  text-align: end;
+  font-size: 2em;
+}
+
+.presentation p {
+    padding-top: 20px
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
     align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-grid1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-grid3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.contact-grid4 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: center;
+}
+
+.section-contact {
+    padding: 20px;
+    box-shadow: 0 0 10px #bbb;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-grid img {
+    height: 50px;
+    margin: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-grid p {
+    text-align: center;
+    width: 100%;
+}
+
+.contact h2 {
+    text-align: center;
 }
 
 .contact-flex p:first-child {
@@ -137,30 +237,36 @@ section > div {
 /* SECTION EXPERIENCE ET FORMATION */
 
 .exp {
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
     border-bottom: 1px solid #bbb;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
-.exp-info {
-    display: flex;
-    flex-flow: column wrap;
-}
-
 .exp-logo {
-    flex: 0 0 25%;
+    grid-column: 1;
     max-width: 100px;
 }
 
 .exp-info {
-    flex: 0 0 70%;
-    margin-left: auto;
+    grid-column: 2;
+    display: flex;
+    flex-flow: column wrap;
+    padding-top: 15px;
+    align-items: center;
+}
+
+.exp-desc {
+    grid-column: 3;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .exp img {
     width: 100%;
+    margin-left: 20px;
 }
 
 .exp h3 {
@@ -176,16 +282,19 @@ section > div {
 
 .h3gauche {
     width: 90%;
+    margin-bottom: 15px;
 }
 
 .comp-pro {
     display: flex ;
     flex-flow: row wrap;
     margin-bottom: 10px;
+    padding-right: 20px;
 }
 
 .comp-pro p {
     flex: 0 0 40%;
+    padding-left: 20px;
 }
 
 .conteneur-barre-pro {
@@ -202,14 +311,24 @@ section > div {
     border-bottom-left-radius: 5px;
 }
 
-.c60{
-width: 60%;
-background-color: #8B8;
+.c65{
+width: 65%;
+background-color: rgb(167, 193, 129);
 }
 
-.c85{
-width: 85%;
-background-color: #8B8;
+.c60{
+    width: 60%;
+    background-color: rgb(167, 193, 129);
+}
+
+.c50{
+width: 50%;
+background-color: rgb(202, 203, 114);
+}
+
+.c75{
+    width: 75%;
+    background-color: #8B8;
 }
 
 .c90{
@@ -217,6 +336,16 @@ width: 90%;
 background-color: #4B8;
 }
 
+.c80{
+width: 80%;
+background-color: #8B8;
+}
+
+.c85{
+    width: 85%;
+    background-color: #4B8;
+}
+    
 .c95{
 width: 95%;
 background-color: #4B8;
@@ -232,6 +361,8 @@ border-radius: 5px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .conteneur-barre-perso{
